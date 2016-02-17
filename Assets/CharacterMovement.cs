@@ -13,7 +13,7 @@ public class CharacterMovement : MonoBehaviour {
 		controller = GetComponent<CharacterController>();
 
 
-		//VRSettings.renderScale = 0.7f;
+		VRSettings.renderScale = 0.7f;
 	}
 	
 	// Update is called once per frame
