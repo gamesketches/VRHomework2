@@ -13,7 +13,7 @@ public class CharacterMovement : MonoBehaviour {
 		controller = GetComponent<CharacterController>();
 
 
-		VRSettings.renderScale = 0.7f;
+		VRSettings.renderScale = 0.3f;
 	}
 	
 	// Update is called once per frame
@@ -26,7 +26,7 @@ public class CharacterMovement : MonoBehaviour {
 		var horizontal = Input.GetAxis("Horizontal");
 
 		// move forward in the direction that the VR headset is looking
-		controller.Move( vertical * Camera.main.transform.forward * Time.deltaTime * 10f);
+		controller.Move( vertical * Camera.main.transform.forward * Time.deltaTime * 10f + Physics.gravity);
 		// turn left or right
 		transform.Rotate( 0f, horizontal * Time.deltaTime * 100f, 0f );
 		RaycastHit hit;
